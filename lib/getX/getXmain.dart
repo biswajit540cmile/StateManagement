@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
 
 class GetXScreen extends StatefulWidget {
 
@@ -15,9 +17,10 @@ class _GetXScreenState extends State<GetXScreen> {
 
     // var title;
 
-    return Scaffold(
-      appBar: AppBar(title:Text("${widget.title} Screen"),centerTitle: true,
-      ),
-    );
+    return GetMaterialApp(
+      home: Scaffold(appBar: AppBar(title:Text("${widget.title} Screen"),centerTitle: true,),
+      ) );
+
   }
 }
+
