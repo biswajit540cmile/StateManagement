@@ -38,17 +38,8 @@ class _MainScreenState extends State<MainScreen> {
   List<ElevatedBtnList> elevatedBtnList = [];
   @override
   void initState() {
-    elevatedBtnList = [
-      ElevatedBtnList("Provider", Colors.greenAccent, const ProviderScreen(title: "Provider")),
-      ElevatedBtnList("Redux", Colors.greenAccent, const ReduxScreen(title: "Redux")),
-      ElevatedBtnList("Binder", Colors.greenAccent, const BinderScreen(title: "Binder")),
-      ElevatedBtnList("Bloc", Colors.greenAccent, const BlocScreen(title: 'Bloc')),
-      ElevatedBtnList("GetX", Colors.greenAccent, const GetXScreen(title:"GetX")),
-      ElevatedBtnList("MobX", Colors.greenAccent,  const MobXScreen(title:"MobX")),
-      ElevatedBtnList("Riverpod", Colors.greenAccent,  const RiverpodScreen(title: "Riverpod")),
-
-    ];
     super.initState();
+    initList();
   }
 
   @override
@@ -84,6 +75,18 @@ class _MainScreenState extends State<MainScreen> {
             );
           }),
     );
+  }
+
+  void initList() {
+    elevatedBtnList = [
+      ElevatedBtnList("Provider", Colors.greenAccent, const ProviderScreen(title: "Provider")),
+      ElevatedBtnList("Redux", Colors.greenAccent, const ReduxScreen(title: "Redux")),
+      ElevatedBtnList("Binder", Colors.greenAccent, const BinderScreen(title: "Binder")),
+      ElevatedBtnList("Bloc", Colors.greenAccent, const BlocScreen(title: 'Bloc')),
+      ElevatedBtnList("GetX", Colors.greenAccent, const GetXScreen(title:"GetX")),
+      ElevatedBtnList("MobX", Colors.greenAccent,  const MobXScreen(title:"MobX")),
+      ElevatedBtnList("Riverpod", Colors.greenAccent,  const RiverpodScreen(title: "Riverpod")),
+    ];
   }
 }
 
